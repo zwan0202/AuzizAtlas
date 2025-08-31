@@ -48,13 +48,13 @@ export function showLocationDetails(location) {
     </div>
     <div class="data-sources" style="margin-top:20px;">
       <h4>Integrated Data Sources</h4>
-      <ul style="font-size:13px; color:#718096;">
-        <li>AEMO Grid & Energy Data</li>
-        <li>Geoscience Australia Spatial Data</li>
-        <li>Bureau of Meteorology Climate Data</li>
-        <li>ACMA Telecommunications Infrastructure</li>
-        <li>BITRE Regional Development Data</li>
-        <li>Rewiring the Nation Investment Data</li>
+      <ul style="font-size:13px; color:#718096; list-style:none; padding-left:0;">
+        <li><input type="checkbox" checked disabled> AEMO Grid & Energy Data</li>
+        <li><input type="checkbox" checked disabled> Geoscience Australia Spatial Data</li>
+        <li><input type="checkbox" checked disabled> Bureau of Meteorology Climate Data</li>
+        <li><input type="checkbox" checked disabled> ACMA Telecommunications Infrastructure</li>
+        <li><input type="checkbox" checked disabled> BITRE Regional Development Data</li>
+        <li><input type="checkbox" checked disabled> Rewiring the Nation Investment Data</li>
       </ul>
     </div>
   `;
