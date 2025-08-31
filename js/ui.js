@@ -16,19 +16,46 @@ export function showLocationDetails(location) {
     location.suitability >= 70 ? 'GOOD' :
     location.suitability >= 50 ? 'MODERATE' : 'LIMITED';
 
-  infoDiv.innerHTML = `
-    <h2>${location.name}</h2>
-    <div class="score-badge ${scoreClass}">${location.suitability}/100 - ${scoreText}</div>
-    <div class="metrics-grid">
-      <div class="metric-card"><div class="metric-label">⚡ Power</div><div class="metric-value">${location.metrics.power}</div></div>
-      <div class="metric-card"><div class="metric-label">🌐 Connectivity</div><div class="metric-value">${location.metrics.connectivity}</div></div>
-      <div class="metric-card"><div class="metric-label">🌡️ Climate</div><div class="metric-value">${location.metrics.climate}</div></div>
-      <div class="metric-card"><div class="metric-label">⚠️ Risk</div><div class="metric-value">${location.metrics.risk}</div></div>
-      <div class="metric-card"><div class="metric-label">🏗️ Infrastructure</div><div class="metric-value">${location.metrics.infrastructure}</div></div>
-      <div class="metric-card"><div class="metric-label">💰 Cost</div><div class="metric-value">${location.metrics.cost}</div></div>
+  // Render all metrics present in the location
+  const metricsHtml = Object.values(location.metrics).map(metric => `
+    <div class="metric-card">
+      <div class="metric-title">${metric.title || ''}</div>
+      <div class="metric-value">${metric.value || ''}</div>
+      <div class="metric-detail">${metric.detail || ''}</div>
     </div>
+  `).join('');
+
+  infoDiv.innerHTML = `
+    <div class="location-header">
+      <div class="location-name">${location.name}</div>
+      <div class="suitability-score ${scoreClass}">${location.suitability}/100 - ${scoreText}</div>
+    </div>
+    ${metricsHtml}
     <div class="chart-container">
       <canvas id="radarChart"></canvas>
+    </div>
+    <div class="advantages-list">
+      <h4>Key Advantages</h4>
+      <ul>
+        ${(location.advantages || []).map(a => `<li class="advantage-item"><span class="advantage-icon">✔️</span><span class="advantage-text">${a}</span></li>`).join('')}
+      </ul>
+    </div>
+    <div class="recommendations">
+      <h4>Strategic Recommendations</h4>
+      <ul>
+        ${(location.recommendations || []).map(r => `<li class="recommendation-item">${r}</li>`).join('')}
+      </ul>
+    </div>
+    <div class="data-sources" style="margin-top:20px;">
+      <h4>Integrated Data Sources</h4>
+      <ul style="font-size:13px; color:#718096;">
+        <li>AEMO Grid & Energy Data</li>
+        <li>Geoscience Australia Spatial Data</li>
+        <li>Bureau of Meteorology Climate Data</li>
+        <li>ACMA Telecommunications Infrastructure</li>
+        <li>BITRE Regional Development Data</li>
+        <li>Rewiring the Nation Investment Data</li>
+      </ul>
     </div>
   `;
 

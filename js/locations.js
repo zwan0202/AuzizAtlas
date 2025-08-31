@@ -3,40 +3,50 @@
 
 export const locations = [
     {
-        name: "Sydney - Eastern Creek",
-        coords: [-33.8, 150.86],
-        suitability: 92,
-        category: "excellent",
+        name: "Sydney",
+        suitability: 73,
+        category: "good",
+        coords: [-33.8688, 151.2093],
         metrics: {
-            energyPrice: "$78/MWh",
-            renewableAccess: "82%",
-            gridCapacity: "3,200 MW available",
-            latencyAsia: "45-65ms",
-            fiberDistance: "2km",
-            coolingDegDays: "320",
-            floodRisk: "Low",
-            workforce: "12,000+ IT professionals",
-            landCost: "$450/sqm",
-            waterAccess: "Excellent",
-            substationDist: "3.5km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$95/MWh",
+                detail: "Renewable Access: 68%<br>Grid Capacity: 800 MW available<br>Substation Distance: 8km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "Tier 1",
+                detail: "3x fiber landing points<br>5G/100G available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "Temperate (Avg. 22°C)",
+                detail: "Humidity: 60%<br>Flood: Low<br>Fire: Moderate"
+            },
+            infrastructure: {
+                title: "Infrastructure",
+                value: "Excellent",
+                detail: "Airport: 20km<br>Major roads: Yes"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$2,500/m²",
+                detail: "Land: $800/m²<br>Labor: High"
+            }
+        },
+        chartData: {
+            labels: ["Energy", "Connectivity", "Environment", "Infrastructure", "Economics"],
+            values: [68, 90, 60, 88, 55]
         },
         advantages: [
-            "Largest existing data center hub with 850MW capacity",
-            "Direct access to Southern Cross Cable landing",
-            "$4.7B Rewiring the Nation investment approved",
-            "Stack Infrastructure's 450MW expansion underway",
-            "5-star NABERS rated facilities available"
+            "Major fiber landing point",
+            "Strong grid reliability",
+            "Skilled workforce"
         ],
         recommendations: [
-            "Optimal for hyperscale AI workloads",
-            "Implement liquid cooling for GPU clusters",
-            "Secure renewable PPA through Central-West Orana REZ",
-            "Consider edge nodes in Parramatta for latency optimization"
-        ],
-        chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [90, 95, 94, 85, 88]
-        }
+            "Consider for hyperscale deployment",
+            "Monitor energy price trends"
+        ]
     },
     {
         name: "Melbourne - Derrimut",
@@ -44,17 +54,26 @@ export const locations = [
         suitability: 89,
         category: "excellent",
         metrics: {
-            energyPrice: "$82/MWh",
-            renewableAccess: "78%",
-            gridCapacity: "2,800 MW available",
-            latencyAsia: "50-70ms",
-            fiberDistance: "4km",
-            coolingDegDays: "280",
-            floodRisk: "Low",
-            workforce: "10,000+ IT professionals",
-            landCost: "$380/sqm",
-            waterAccess: "Good",
-            substationDist: "5km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$82/MWh",
+                detail: "Renewable Access: 78%<br>Grid Capacity: 2,800 MW available<br>Substation Distance: 5km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "50-70ms to Asia",
+                detail: "Fiber Distance: 4km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "280 Cooling Degree Days",
+                detail: "Flood Risk: Low<br>Water Access: Good"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$380/sqm",
+                detail: "Workforce: 10,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Second largest market with 650MW capacity",
@@ -70,8 +89,8 @@ export const locations = [
             "Partner with local universities for talent pipeline"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [88, 90, 92, 87, 85]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [78, 90, 92, 85]
         }
     },
     {
@@ -80,17 +99,26 @@ export const locations = [
         suitability: 88,
         category: "excellent",
         metrics: {
-            energyPrice: "$68/MWh",
-            renewableAccess: "85%",
-            gridCapacity: "1,800 MW available",
-            latencyAsia: "35-50ms",
-            fiberDistance: "6km",
-            coolingDegDays: "380",
-            floodRisk: "Very Low",
-            workforce: "5,000+ IT professionals",
-            landCost: "$220/sqm",
-            waterAccess: "Moderate",
-            substationDist: "4km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$68/MWh",
+                detail: "Renewable Access: 85%<br>Grid Capacity: 1,800 MW available<br>Substation Distance: 4km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "35-50ms to Asia",
+                detail: "Fiber Distance: 6km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "380 Cooling Degree Days",
+                detail: "Flood Risk: Very Low<br>Water Access: Moderate"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$220/sqm",
+                detail: "Workforce: 5,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Lowest energy costs in Australia",
@@ -106,8 +134,8 @@ export const locations = [
             "Secure long-term renewable PPAs now"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [95, 85, 82, 90, 92]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [85, 85, 82, 92]
         }
     },
     {
@@ -116,17 +144,26 @@ export const locations = [
         suitability: 76,
         category: "good",
         metrics: {
-            energyPrice: "$92/MWh",
-            renewableAccess: "72%",
-            gridCapacity: "1,200 MW available",
-            latencyAsia: "55-75ms",
-            fiberDistance: "8km",
-            coolingDegDays: "520",
-            floodRisk: "Moderate",
-            workforce: "6,000+ IT professionals",
-            landCost: "$320/sqm",
-            waterAccess: "Good",
-            substationDist: "7km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$92/MWh",
+                detail: "Renewable Access: 72%<br>Grid Capacity: 1,200 MW available<br>Substation Distance: 7km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "55-75ms to Asia",
+                detail: "Fiber Distance: 8km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "520 Cooling Degree Days",
+                detail: "Flood Risk: Moderate<br>Water Access: Good"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$320/sqm",
+                detail: "Workforce: 6,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Growing market with 280MW capacity",
@@ -142,8 +179,8 @@ export const locations = [
             "Target local enterprise customers"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [75, 78, 74, 70, 80]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [72, 78, 74, 80]
         }
     },
     {
@@ -152,17 +189,26 @@ export const locations = [
         suitability: 73,
         category: "good",
         metrics: {
-            energyPrice: "$95/MWh",
-            renewableAccess: "68%",
-            gridCapacity: "800 MW available",
-            latencyAsia: "60-80ms",
-            fiberDistance: "10km",
-            coolingDegDays: "350",
-            floodRisk: "Very Low",
-            workforce: "3,000+ IT professionals",
-            landCost: "$180/sqm",
-            waterAccess: "Limited",
-            substationDist: "8km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$95/MWh",
+                detail: "Renewable Access: 68%<br>Grid Capacity: 800 MW available<br>Substation Distance: 8km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "60-80ms to Asia",
+                detail: "Fiber Distance: 10km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "350 Cooling Degree Days",
+                detail: "Flood Risk: Very Low<br>Water Access: Limited"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$180/sqm",
+                detail: "Workforce: 3,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Low natural disaster risk",
@@ -178,8 +224,8 @@ export const locations = [
             "Focus on government contracts"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [70, 72, 70, 85, 78]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [68, 72, 70, 78]
         }
     },
     {
@@ -188,17 +234,26 @@ export const locations = [
         suitability: 81,
         category: "good",
         metrics: {
-            energyPrice: "$88/MWh",
-            renewableAccess: "100%",
-            gridCapacity: "600 MW available",
-            latencyAsia: "58-78ms",
-            fiberDistance: "3km",
-            coolingDegDays: "280",
-            floodRisk: "Very Low",
-            workforce: "4,000+ IT professionals",
-            landCost: "$380/sqm",
-            waterAccess: "Good",
-            substationDist: "5km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$88/MWh",
+                detail: "Renewable Access: 100%<br>Grid Capacity: 600 MW available<br>Substation Distance: 5km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "58-78ms to Asia",
+                detail: "Fiber Distance: 3km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "280 Cooling Degree Days",
+                detail: "Flood Risk: Very Low<br>Water Access: Good"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$380/sqm",
+                detail: "Workforce: 4,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "100% renewable energy available",
@@ -214,45 +269,49 @@ export const locations = [
             "Develop sovereign cloud capabilities"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [85, 75, 82, 88, 75]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [100, 75, 82, 75]
         }
     },
     {
         name: "Darwin",
         coords: [-12.46, 130.84],
-        suitability: 65,
+        suitability: 62,
         category: "moderate",
         metrics: {
-            energyPrice: "$125/MWh",
-            renewableAccess: "55%",
-            gridCapacity: "400 MW available",
-            latencyAsia: "25-40ms",
-            fiberDistance: "12km",
-            coolingDegDays: "1,200",
-            floodRisk: "High (cyclone)",
-            workforce: "1,000+ IT professionals",
-            landCost: "$150/sqm",
-            waterAccess: "Seasonal",
-            substationDist: "10km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$105/MWh",
+                detail: "Renewable Access: 65%<br>Grid Capacity: 600 MW available<br>Substation Distance: 9km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "45-65ms to Asia",
+                detail: "Fiber Distance: 15km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "850 Cooling Degree Days",
+                detail: "Flood Risk: High (cyclone)<br>Water Access: Good"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$180/sqm",
+                detail: "Workforce: 1,200+ IT professionals<br>State Incentives: Available"
+            }
+        },
+        chartData: {
+            labels: ["Energy", "Connectivity", "Environment", "Economics"],
+            values: [65, 70, 55, 65]
         },
         advantages: [
-            "Closest to Southeast Asia",
-            "$250M Rewiring the Nation investment",
-            "Strategic for defense applications",
-            "Multiple submarine cables planned",
-            "Land availability excellent"
+            "Direct Asia connectivity",
+            "Strong renewable potential"
         ],
         recommendations: [
-            "Focus on edge/CDN for Asia",
-            "Implement cyclone-resistant design",
-            "Maximize liquid cooling efficiency",
-            "Partner with defense contractors"
-        ],
-        chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [60, 85, 58, 50, 72]
-        }
+            "Mitigate cyclone risk",
+            "Explore government incentives"
+        ]
     },
     {
         name: "Newcastle",
@@ -260,17 +319,26 @@ export const locations = [
         suitability: 78,
         category: "good",
         metrics: {
-            energyPrice: "$85/MWh",
-            renewableAccess: "75%",
-            gridCapacity: "1,000 MW available",
-            latencyAsia: "48-68ms",
-            fiberDistance: "5km",
-            coolingDegDays: "340",
-            floodRisk: "Low",
-            workforce: "2,000+ IT professionals",
-            landCost: "$250/sqm",
-            waterAccess: "Excellent",
-            substationDist: "6km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$85/MWh",
+                detail: "Renewable Access: 75%<br>Grid Capacity: 1,000 MW available<br>Substation Distance: 6km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "48-68ms to Asia",
+                detail: "Fiber Distance: 5km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "340 Cooling Degree Days",
+                detail: "Flood Risk: Low<br>Water Access: Excellent"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$250/sqm",
+                detail: "Workforce: 2,000+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Hunter Valley renewable energy zone",
@@ -286,8 +354,8 @@ export const locations = [
             "Implement waste heat recovery"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [78, 76, 75, 80, 82]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [75, 76, 75, 82]
         }
     },
     {
@@ -296,17 +364,26 @@ export const locations = [
         suitability: 70,
         category: "good",
         metrics: {
-            energyPrice: "$78/MWh",
-            renewableAccess: "100%",
-            gridCapacity: "500 MW available",
-            latencyAsia: "70-90ms",
-            fiberDistance: "8km",
-            coolingDegDays: "180",
-            floodRisk: "Low",
-            workforce: "1,500+ IT professionals",
-            landCost: "$200/sqm",
-            waterAccess: "Excellent",
-            substationDist: "7km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$78/MWh",
+                detail: "Renewable Access: 100%<br>Grid Capacity: 500 MW available<br>Substation Distance: 7km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "70-90ms to Asia",
+                detail: "Fiber Distance: 8km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "180 Cooling Degree Days",
+                detail: "Flood Risk: Low<br>Water Access: Excellent"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$200/sqm",
+                detail: "Workforce: 1,500+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "100% renewable hydro power",
@@ -322,8 +399,8 @@ export const locations = [
             "Develop as green data center hub"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [90, 65, 68, 82, 75]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [100, 65, 68, 75]
         }
     },
     {
@@ -332,17 +409,26 @@ export const locations = [
         suitability: 62,
         category: "moderate",
         metrics: {
-            energyPrice: "$105/MWh",
-            renewableAccess: "65%",
-            gridCapacity: "600 MW available",
-            latencyAsia: "45-65ms",
-            fiberDistance: "15km",
-            coolingDegDays: "850",
-            floodRisk: "High (cyclone)",
-            workforce: "1,200+ IT professionals",
-            landCost: "$180/sqm",
-            waterAccess: "Good",
-            substationDist: "9km"
+            energy: {
+                title: "Energy Infrastructure",
+                value: "$105/MWh",
+                detail: "Renewable Access: 65%<br>Grid Capacity: 600 MW available<br>Substation Distance: 9km"
+            },
+            connectivity: {
+                title: "Network Connectivity",
+                value: "45-65ms to Asia",
+                detail: "Fiber Distance: 15km<br>NBN Infrastructure: Available"
+            },
+            environment: {
+                title: "Environmental Factors",
+                value: "850 Cooling Degree Days",
+                detail: "Flood Risk: High (cyclone)<br>Water Access: Good"
+            },
+            economics: {
+                title: "Economic Factors",
+                value: "$180/sqm",
+                detail: "Workforce: 1,200+ IT professionals<br>State Incentives: Available"
+            }
         },
         advantages: [
             "Strategic military presence",
@@ -358,8 +444,8 @@ export const locations = [
             "Target regional government services"
         ],
         chartData: {
-            labels: ['Energy', 'Connectivity', 'Infrastructure', 'Risk', 'Economics'],
-            values: [65, 68, 60, 55, 70]
+            labels: ['Energy', 'Connectivity', 'Environment', 'Economics'],
+            values: [65, 68, 60, 70]
         }
     }
 ];
