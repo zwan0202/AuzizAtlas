@@ -17,7 +17,14 @@ body {
     padding: 20px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+
+    /* Restrict width & center the block */
+    max-width: 800px;
+    margin: 20px auto; /* top/bottom 20px, auto left/right */
+    text-align: center;
+    border-radius: 12px; /* optional: rounded edges */
 }
+
 
 .header h1 {
     color: #2d3748;
@@ -29,6 +36,24 @@ body {
     color: #718096;
     font-size: 14px;
 }
+
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* center + spacing */
+    max-width: 220px;    /* scale up */
+    height: auto;        /* keep proportions */
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: #4a5568;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: auto; /* pushes footer to bottom */
+}
+
 
 .main-container {
     display: flex;
